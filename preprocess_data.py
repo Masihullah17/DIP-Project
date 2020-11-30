@@ -1,11 +1,14 @@
 import numpy as np
 import pandas as pd
 import pickle
+from skimage import data, img_as_float
+from skimage import exposure
 
 # Preprocessing Functions
 def contrastStretching(image):
 	# Implement contrast streching here
-	return image
+	img_eq = exposure.equalize_hist(image)
+	return img_eq
 
 def faceEncoding(image):
 	# Implement face encodings here
