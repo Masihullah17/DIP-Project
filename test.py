@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 image = cv2.imread('test_image.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+#image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Replace function with the one, you are working on
 processedImage = contrastStretching(image)
