@@ -1,8 +1,9 @@
-from preprocess_data import contrastStretching, faceEncoding, generateIntensityImages, pseudoLabelledData
+from preprocess_data import contrastStretching, faceEncoding, generateIntensityImages, pseudoLabelledData, findFaces, detectCascade
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import face_recognition
 
 image = cv2.imread('test_image.jpg')
 #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
