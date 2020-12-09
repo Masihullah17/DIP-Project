@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import pickle
+import cv2
 from skimage import data, img_as_float
 from skimage import exposure
 
@@ -18,6 +19,9 @@ def faceEncoding(image):
 def generateIntensityImages(image):
 	# Implement generation of images with different intensites
 	generatedImages = []
+	for gamma in [0.2, 0.5, 1.2, 1.4]:
+		generated_intensity = np.array(255*(image / 255) ** gamma, dtype = 'uint8')
+		generatedImages.append(generated_intensity)
 	return generatedImages
 
 def pseudoLabelledData():

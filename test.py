@@ -9,7 +9,9 @@ image = cv2.imread('test_image.jpg')
 
 # Replace function with the one, you are working on
 processedImage = contrastStretching(image)
+intensityImage = []
+intensityImage = generateIntensityImages(image)
 
 # Left image is original image and right image is the processed image
-plt.imshow(np.concatenate((image, processedImage), axis=1), cmap=cm.gray, vmin=0, vmax=255)
+plt.imshow(np.concatenate((image, intensityImage[1]), axis=1), cmap=cm.gray, vmin=0, vmax=255)
 plt.show()
